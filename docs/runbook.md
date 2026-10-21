@@ -4,16 +4,41 @@
 
 ## Start locally / Локално стартиране
 
-TODO
+pip install -r requirements.txt
+python -m app.main
 
 ## Check that it works / Проверка, че работи
 
-TODO: which address do you open and what should you see? / кой адрес отваряте и какво трябва да видите?
+Open:
+
+http://127.0.0.1:8000/health
+
+You should see:
+
+{"status":"ok"}
 
 ## Run the tests / Тестове
 
-TODO
+pytest
 
 ## When something breaks / Когато нещо се счупи
 
-TODO: the first three things you check. / първите три неща, които проверявате.
+Check dependencies:
+pip install -r requirements.txt
+Start the application and check for errors:
+python -m app.main
+Run the tests:
+pytes
+
+Run with Docker
+Build the image
+docker build -t notes-api:0.3.0 .
+
+Run the container
+docker run -p 8000:8000 notes-api:0.3.0
+
+View logs
+docker logs
+
+Stop the container
+docker stop
